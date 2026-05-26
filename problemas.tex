@@ -469,6 +469,208 @@ Proceso capaz                      & \checkmark\; S\'i & \checkmark\; S\'i \\
 \end{tabular}
 \end{center}
 
+%% ═══════════════════════════════════════════════════════════════════════════
+%%  PREGUNTA 3 — Característica de calidad del proyecto
+%% ═══════════════════════════════════════════════════════════════════════════
+\newpage
+\section{Pregunta 3 -- Caracter\'istica de calidad del proyecto de ingenier\'ia}
+
+\noindent\textbf{Proyecto:} \textit{PharmaTrack} --- Sistema de monitoreo de condiciones
+de almacenamiento de medicamentos mediante sensores IoT
+(ICE, IPN ESIME Culhuac\'an).
+
+\vspace{8pt}
+
+\begin{tcolorbox}[resultadoStyle, title={Caracter\'istica de calidad seleccionada}]
+\textbf{Temperatura de almacenamiento} de los medicamentos monitoreada por los
+nodos sensores del sistema PharmaTrack.\\[4pt]
+\begin{tabular}{ll}
+  \textbf{Variable:}    & Temperatura ($T$) \\[3pt]
+  \textbf{Unidad:}      & Grados Celsius (\si{\celsius}) \\[3pt]
+  \textbf{Instrumento:} & Sensor digital de temperatura DS18B20
+                          (resoluci\'on $\pm$\,0.5\,\si{\celsius}),
+                          calibrado con term\'ometro patr\'on NIST \\[3pt]
+  \textbf{Nominal:}     & $T_{\text{nom}} = 5$\,\si{\celsius}
+                          (cadena de fr\'io farmac\'eutica est\'andar) \\[3pt]
+  \textbf{Tolerancia:}  & $\pm\,3$\,\si{\celsius}
+                          ($T \in [2,\,8]$\,\si{\celsius} seg\'un NOM-059-SSA1)
+\end{tabular}
+\end{tcolorbox}
+
+\interpretacion[Justificaci\'on]{
+La temperatura es la caracter\'istica de calidad cr\'itica en PharmaTrack porque
+una desviaci\'on fuera del rango $[2,\,8]$\,\si{\celsius} degrada la eficacia o
+la seguridad de los medicamentos. El sensor DS18B20 permite adquisici\'on continua
+v\'ia protocolo 1-Wire, su se\~nal es procesada por la API del sistema y visualizada
+en el \textit{dashboard} del \textit{frontend}, lo que habilita alertas en tiempo real
+y trazabilidad completa de la cadena de fr\'io.}
+
+%% ═══════════════════════════════════════════════════════════════════════════
+%%  PREGUNTA 4 — Aspectos de la norma ISO / NMX
+%% ═══════════════════════════════════════════════════════════════════════════
+\newpage
+\section{Pregunta 4 -- Aspectos que mide la norma ISO\,9001:2015 / NMX-CC-9001}
+
+\noindent La norma internacional \textbf{ISO\,9001:2015} (adoptada en M\'exico como
+\textbf{NMX-CC-9001-IMNC-2015}) estructura los requisitos del Sistema de Gesti\'on
+de la Calidad (SGC) en \textbf{siete grandes grupos de aspectos}:
+
+\vspace{6pt}
+\renewcommand{\arraystretch}{1.4}
+\begin{center}
+\begin{tabular}{>{\bfseries}c>{\centering}m{3.2cm}>{\raggedright\arraybackslash}m{7.5cm}}
+\toprule
+\rowcolor{azulprin}
+\color{white}\textbf{Cl\'ausula} &
+\color{white}\textbf{Aspecto} &
+\color{white}\textbf{Qu\'e eval\'ua / mide} \\
+\midrule
+4 & Contexto de la organizaci\'on &
+Factores internos y externos, partes interesadas, alcance del SGC. \\
+\rowcolor{grisclaro}
+5 & Liderazgo &
+Compromiso de la alta direcci\'on, pol\'itica de calidad, roles y responsabilidades. \\
+6 & Planificaci\'on &
+Riesgos y oportunidades, objetivos de calidad, planificaci\'on de cambios. \\
+\rowcolor{grisclaro}
+7 & Soporte &
+Recursos (humanos, infraestructura, ambiente), competencias, comunicaci\'on, informaci\'on documentada. \\
+8 & Operaci\'on &
+Planificaci\'on y control de procesos, dise\~no, producci\'on y provisi\'on de servicios, control de salidas no conformes. \\
+\rowcolor{grisclaro}
+9 & Evaluaci\'on del desempe\~no &
+Seguimiento, medici\'on, an\'alisis; auditor\'ias internas; revisi\'on por la direcci\'on; satisfacci\'on del cliente. \\
+10 & Mejora &
+No conformidades, acciones correctivas, mejora continua. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\interpretacion[Conclusi\'on]{
+La norma no mide solo el producto final: eval\'ua el \textbf{sistema completo} que
+rodea a su producci\'on. Organizaciones como la que desarrolla PharmaTrack deben
+demostrar conformidad con todas estas cl\'ausulas para obtener la certificaci\'on
+ISO\,9001 y garantizar que el software, el hardware y los procesos operativos
+producen resultados de calidad de forma consistente y trazable.}
+
+%% ═══════════════════════════════════════════════════════════════════════════
+%%  PREGUNTA 5 — Ciclo PHVA
+%% ═══════════════════════════════════════════════════════════════════════════
+\newpage
+\section{Pregunta 5 -- Ciclo PHVA (PVHA) en ISO\,9001:2015 y NMX-CC-9001}
+
+\noindent El \textbf{Ciclo PHVA} (Planear -- Hacer -- Verificar -- Actuar),
+tambi\'en conocido como \textit{ciclo de Deming} o \textit{ciclo PDCA} en ingl\'es,
+es el modelo iterativo de mejora continua sobre el que se estructura la norma
+ISO\,9001:2015. Cada etapa corresponde a un conjunto de cl\'ausulas:
+
+\vspace{8pt}
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{>{\centering\bfseries\color{azulprin}}m{2cm}
+                >{\centering}m{2.5cm}
+                >{\raggedright\arraybackslash}m{8cm}}
+\toprule
+\rowcolor{azulprin}
+\color{white}\textbf{Etapa} &
+\color{white}\textbf{Cl\'ausulas ISO} &
+\color{white}\textbf{Descripci\'on} \\
+\midrule
+Planear & 4, 5, 6, 7 &
+Establecer los objetivos del sistema, identificar riesgos y oportunidades,
+asignar recursos y definir los procesos necesarios para entregar resultados
+conformes con los requisitos del cliente. \\
+\rowcolor{grisclaro}
+Hacer & 8 &
+Implementar y ejecutar los procesos planificados: producci\'on, prestaci\'on
+del servicio, control de proveedores y gesti\'on de cambios. \\
+Verificar & 9 &
+Hacer seguimiento y medici\'on de los procesos y sus resultados; realizar
+auditor\'ias internas; analizar la satisfacci\'on del cliente y reportar
+el desempe\~no a la alta direcci\'on. \\
+\rowcolor{grisclaro}
+Actuar & 10 &
+Tomar acciones correctivas ante no conformidades y emprender acciones de
+mejora continua; los resultados alimentan de nuevo la etapa de Planear. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{10pt}
+\begin{tcolorbox}[enhanced, colback=azulclaro, colframe=azulborde, arc=4pt,
+    boxrule=1pt, left=8pt, right=8pt, top=6pt, bottom=6pt]
+\centering
+\textbf{\color{azulprin}El ciclo es iterativo e infinito:}\\[4pt]
+$\text{Planear} \;\longrightarrow\; \text{Hacer} \;\longrightarrow\;
+ \text{Verificar} \;\longrightarrow\; \text{Actuar} \;\longrightarrow\;
+ \text{Planear} \;\longrightarrow\; \cdots$\\[4pt]
+Cada vuelta completa del ciclo eleva el nivel de calidad del sistema.
+\end{tcolorbox}
+
+\interpretacion[Aplicaci\'on en PharmaTrack]{
+\textbf{Planear:} definir el rango aceptable de temperatura $[2, 8]$\,\si{\celsius}
+y los umbrales de alerta del sistema.
+\textbf{Hacer:} operar los nodos sensores y registrar las lecturas en la API.
+\textbf{Verificar:} analizar los datos en el \textit{dashboard}; detectar
+desviaciones y generar reportes.
+\textbf{Actuar:} emitir alertas, corregir fallas en la cadena de fr\'io y
+ajustar los par\'ametros de monitoreo para la siguiente iteraci\'on.}
+
+%% ═══════════════════════════════════════════════════════════════════════════
+%%  PREGUNTA 7 — Trazabilidad de las mediciones
+%% ═══════════════════════════════════════════════════════════════════════════
+\newpage
+\section{Pregunta 7 -- Trazabilidad de las mediciones}
+
+\begin{tcolorbox}[resultadoStyle, title={Definici\'on}]
+La \textbf{trazabilidad de las mediciones} es la propiedad de un resultado de
+medici\'on por la cual ese resultado puede relacionarse con una referencia
+(patr\'on nacional o internacional) mediante una \textbf{cadena ininterrumpida
+y documentada de calibraciones}, cada una con su incertidumbre asociada
+(ISO\,9001:2015, cl\'ausula 7.1.5).
+\end{tcolorbox}
+
+\vspace{10pt}
+\noindent\textbf{Cadena de trazabilidad (ejemplo para temperatura en PharmaTrack):}
+
+\vspace{6pt}
+\begin{center}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{>{\centering}m{0.5cm}>{\bfseries\centering}m{3.8cm}
+                >{\raggedright\arraybackslash}m{8cm}}
+\toprule
+\rowcolor{azulprin}
+\color{white}\textbf{\#} &
+\color{white}\textbf{Nivel} &
+\color{white}\textbf{Descripci\'on} \\
+\midrule
+1 & Patr\'on internacional &
+Sistema Internacional de Unidades (SI) definido por el BIPM (Bureau
+International des Poids et Mesures). \\
+\rowcolor{grisclaro}
+2 & Patr\'on nacional &
+CENAM (Centro Nacional de Metrolog\'ia, M\'exico) --- custodio del patr\'on
+primario de temperatura en M\'exico. \\
+3 & Laboratorio acreditado &
+Laboratorio de calibraci\'on con acreditaci\'on EMA que calibra term\'ometros
+de referencia trazables al CENAM. \\
+\rowcolor{grisclaro}
+4 & Instrumento de campo &
+Sensor DS18B20 calibrado contra el term\'ometro de referencia del laboratorio
+acreditado; con certificado y fecha de vencimiento. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\interpretacion[Importancia de la trazabilidad]{
+Sin trazabilidad, una lectura de $5$\,\si{\celsius} del sensor PharmaTrack no
+tiene significado metrolog\'ico verificable: no puede compararse con otra
+medici\'on ni garantizarse ante una autoridad regulatoria (COFEPRIS, FDA).
+Con trazabilidad, cada dato registrado por el sistema puede defenderse
+documentalmente ante una auditor\'ia, cumpliendo la cl\'ausula 7.1.5 de
+ISO\,9001:2015 y los requisitos de la NOM-059-SSA1 para la cadena de fr\'io
+farmac\'eutica.}
+
 \vspace{1.5cm}
 \begin{center}
 \small\color{grismedio}
