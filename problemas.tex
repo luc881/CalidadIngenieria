@@ -10,11 +10,38 @@
 %% ═══════════════════════════════════════════════════════════════════════════
 \section{Problema 1 -- Proceso de inyecci\'on de pl\'astico (grosor del envase)}
 
-\noindent\textbf{Datos del problema:} Grosor nominal = 1.20\,mm,
-tolerancia $\pm\,0.10$\,mm, muestra $n = 125$ piezas.
-\[
-  E_I = 1.10\;\text{mm} \qquad E_S = 1.30\;\text{mm}
-\]
+\enunciado[Enunciado --- Valor: 3 puntos]{
+En un proceso de inyecci\'on de pl\'astico una caracter\'istica de calidad del
+producto (envase) es su \textbf{grosor}, que debe ser de 1.20\,mm con una
+tolerancia de $\pm$0.10\,mm. As\'i, para considerar que el proceso de inyecci\'on
+fue satisfactorio, el grosor del envase debe estar entre la especificaci\'on
+inferior $E_I = 1.10$ y la superior $E_S = 1.30$. En un estudio de capacidad
+para este proceso es necesario contestar las siguientes interrogantes:
+\textit{¿qu\'e tipo de envases en cuanto a grosor se est\'an produciendo? ¿El
+grosor medio es adecuado? ¿La variabilidad del grosor es mucha o poca?}
+Para contestar estas preguntas, durante una semana se obtuvieron de una l\'inea
+de producci\'on los \textbf{125 datos} de la tabla. El muestreo fue sistem\'atico:
+cada determinado tiempo se tomaban cinco productos y se med\'ian. A continuaci\'on
+se analizar\'an estos datos por medio de diferentes estad\'isticos: medidas de
+tendencia central (\textsc{media, mediana, moda}) y medidas de dispersi\'on
+(\textsc{desviaci\'on est\'andar, varianza, rango, coeficiente de variaci\'on}).
+
+\vspace{6pt}
+{\footnotesize
+\renewcommand{\arraystretch}{1.2}
+\begin{center}
+\begin{tabular}{*{17}{r@{\hspace{5pt}}}}
+1.15 & 1.20 & 1.17 & 1.16 & 1.16 & 1.15 & 1.17 & 1.20 & 1.16 & 1.19 & 1.17 & 1.13 & 1.15 & 1.20 & 1.18 & 1.17 & 1.16 \\
+1.20 & 1.17 & 1.17 & 1.20 & 1.14 & 1.19 & 1.13 & 1.19 & 1.16 & 1.18 & 1.16 & 1.17 & 1.15 & 1.21 & 1.15 & 1.20 & 1.18 \\
+1.17 & 1.17 & 1.13 & 1.16 & 1.16 & 1.17 & 1.20 & 1.18 & 1.15 & 1.13 & 1.20 & 1.17 & 1.19 & 1.23 & 1.20 & 1.24 & 1.17 \\
+1.17 & 1.17 & 1.17 & 1.18 & 1.24 & 1.16 & 1.18 & 1.16 & 1.22 & 1.23 & 1.22 & 1.19 & 1.13 & 1.15 & 1.15 & 1.22 & 1.19 \\
+1.18 & 1.19 & 1.17 & 1.16 & 1.17 & 1.18 & 1.19 & 1.23 & 1.19 & 1.16 & 1.19 & 1.20 & 1.17 & 1.13 & 1.22 & 1.19 & 1.21 \\
+1.20 & 1.19 & 1.17 & 1.19 & 1.22 & 1.19 & 1.18 & 1.11 & 1.19 & 1.19 & 1.17 & 1.19 & 1.17 & 1.20 & 1.16 & 1.19 & 1.20 \\
+1.20 & 1.17 & 1.25 & 1.16 & 1.16 & 1.20 & 1.20 & 1.16 & 1.18 & 1.21 & 1.20 & 1.22 & 1.19 & 1.14 & 1.19 & 1.17 & 1.20 \\
+1.16 & 1.15 & 1.20 & 1.12 & 1.11 & 1.18 & & & & & & & & & & & \\
+\end{tabular}
+\end{center}
+}}
 
 % ─── 1.A Tendencia central ────────────────────────────────────────────────────
 \subsection{A) Medidas de tendencia central}
@@ -227,11 +254,42 @@ se recomienda un peque\~no ajuste para centrar la media exactamente en 1.20\,mm.
 \newpage
 \section{Problema 2 -- Corte de tiras de hule (longitud)}
 
-\noindent\textbf{Datos del problema:} Longitud nominal = 200\,mm,
-tolerancia $\pm\,3$\,mm, muestra $n = 110$ piezas (dos m\'aquinas).
-\[
-  E_I = 197\;\text{mm} \qquad E_S = 203\;\text{mm}
-\]
+\enunciado[Enunciado --- Valor: 3 puntos]{
+Dos m\'aquinas, cada una operada por una persona, son utilizadas para cortar
+\textbf{tiras de hule}, cuya longitud ideal es de 200\,mm con una tolerancia de
+$\pm\,3$\,mm. Al final del turno un inspector toma una muestra e inspecciona que la
+longitud cumpla especificaciones. A continuaci\'on se muestran las \'ultimas
+\textbf{110 mediciones} para ambas m\'aquinas:
+
+\vspace{6pt}
+{\footnotesize
+\renewcommand{\arraystretch}{1.2}
+\begin{center}
+\begin{tabular}{*{8}{r@{\hspace{8pt}}}}
+199.2 & 199.7 & 201.8 & 202.0 & 201.0 & 201.5 & 200.0 & 199.8 \\
+200.7 & 201.4 & 200.4 & 201.7 & 201.4 & 201.4 & 200.8 & 202.1 \\
+200.7 & 200.9 & 201.0 & 201.5 & 201.2 & 201.3 & 200.9 & 200.7 \\
+200.5 & 201.2 & 201.7 & 201.2 & 201.2 & 200.5 & 200.1 & 201.4 \\
+200.2 & 201.0 & 201.4 & 201.4 & 201.1 & 201.2 & 201.0 & 200.6 \\
+202.0 & 201.0 & 201.5 & 201.6 & 200.6 & 200.1 & 201.3 & 200.6 \\
+200.7 & 201.8 & 200.5 & 200.5 & 200.8 & 200.3 & 200.7 & 199.5 \\
+198.6 & 200.3 & 198.5 & 198.2 & 199.6 & 198.2 & 198.4 & 199.0 \\
+199.7 & 199.7 & 199.0 & 198.4 & 199.1 & 198.8 & 198.3 & 198.9 \\
+199.6 & 199.0 & 198.7 & 200.5 & 198.4 & 199.2 & 198.8 & 198.5 \\
+198.9 & 198.8 & 198.7 & 199.2 & 199.3 & 199.7 & 197.8 & 199.9 \\
+199.0 & 199.0 & 198.7 & 199.1 & 200.3 & 200.5 & 198.1 & 198.3 \\
+199.6 & 199.0 & 199.7 & 198.9 & 199.2 & 197.9 & 200.3 & 199.6 \\
+199.4 & 198.7 & 198.5 & 198.7 & 198.6 & 198.5 & & \\
+\end{tabular}
+\end{center}
+}
+
+\vspace{4pt}
+\noindent Se pide: \textbf{A)} medidas de tendencia central e interpretaci\'on;\quad
+\textbf{B)} tabla de distribuci\'on de frecuencias;\quad
+\textbf{C)} desviaci\'on est\'andar y coeficiente de variaci\'on;\quad
+\textbf{D)} histograma e interpretaci\'on.
+}
 
 % ─── 2.A Tendencia central ────────────────────────────────────────────────────
 \subsection{A) Medidas de tendencia central}
@@ -482,6 +540,13 @@ Proceso capaz                      & \checkmark\; S\'i & \checkmark\; S\'i \\
 \newpage
 \section{Pregunta 3 -- Caracter\'istica de calidad del proyecto de ingenier\'ia}
 
+\enunciado[Enunciado]{
+De tu proyecto de ingenier\'ia determina una \textbf{caracter\'istica de calidad}
+en cuanto a: funcionamiento, percepci\'on del usuario, dise\~no, operaci\'on, etc.
+¿Qu\'e unidad de medida vas a utilizar (volumen, longitud, pureza, densidad, etc.)
+y qu\'e instrumento, equipo, aparato o maquinaria utilizar\'ias?
+}
+
 \noindent\textbf{Proyecto:} \textit{PharmaTrack} --- Sistema de monitoreo de condiciones
 de almacenamiento de medicamentos mediante sensores IoT
 (ICE, IPN ESIME Culhuac\'an).
@@ -519,6 +584,10 @@ y trazabilidad completa de la cadena de fr\'io.}
 %% ═══════════════════════════════════════════════════════════════════════════
 \newpage
 \section{Pregunta 4 -- Aspectos que mide la norma ISO\,9001:2015 / NMX-CC-9001}
+
+\enunciado[Enunciado]{
+¿Qu\'e aspectos mide la norma de calidad internacional (ISO) y/o nacional (NMX)?
+}
 
 \noindent La norma internacional \textbf{ISO\,9001:2015} (adoptada en M\'exico como
 \textbf{NMX-CC-9001-IMNC-2015}) estructura los requisitos del Sistema de Gesti\'on
@@ -572,6 +641,12 @@ operativos produzcan resultados de calidad de forma consistente y trazable.}
 %% ═══════════════════════════════════════════════════════════════════════════
 \newpage
 \section{Pregunta 5 -- Ciclo PHVA en ISO\,9001:2015 y NMX-CC-9001}
+
+\enunciado[Enunciado]{
+La \textbf{Norma Internacional ISO\,9001:2015} y la \textbf{Norma Mexicana
+NMX-CC-9001-IMNC-2015} incorporan el \textbf{Ciclo PVHA}. Explica en qu\'e
+consiste \'este.
+}
 
 \noindent El \textbf{Ciclo PHVA} (Planear -- Hacer -- Verificar -- Actuar),
 tambi\'en conocido como \textit{ciclo de Deming} o \textit{PDCA} en ingl\'es,
@@ -635,6 +710,10 @@ par\'ametros para la siguiente iteraci\'on.}
 %% ═══════════════════════════════════════════════════════════════════════════
 \newpage
 \section{Pregunta 7 -- Trazabilidad de las mediciones}
+
+\enunciado[Enunciado]{
+¿Qu\'e es la \textbf{trazabilidad de las mediciones}?
+}
 
 \begin{tcolorbox}[resultadoStyle, title={Definici\'on}]
 La \textbf{trazabilidad de las mediciones} es la propiedad de un resultado de

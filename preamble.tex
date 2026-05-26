@@ -80,6 +80,17 @@
     arc=3pt, boxrule=0.6pt,
     left=5pt, right=5pt, top=3pt, bottom=3pt,
   },
+  enunciadoStyle/.style={
+    enhanced, breakable,
+    colback=ambarcl,
+    colframe=ambar,
+    fonttitle=\bfseries\small,
+    coltitle=white,
+    attach boxed title to top left={yshift=-2mm, xshift=6mm},
+    boxed title style={colback=ambar, colframe=ambar, rounded corners},
+    arc=4pt, boxrule=1pt,
+    left=6pt, right=6pt, top=8pt, bottom=6pt,
+  },
   tituloStyle/.style={
     enhanced,
     colback=azulprin,
@@ -106,6 +117,9 @@
   \vspace{2pt}}
 
 \newcommand{\formula}[1]{\vspace{2pt}\[ #1 \]\vspace{-4pt}}
+
+\newcommand{\enunciado}[2][Enunciado]{%
+  \begin{tcolorbox}[enunciadoStyle, title={#1}]#2\end{tcolorbox}}
 
 % ─── Carpeta de imágenes ──────────────────────────────────────────────────────
 \graphicspath{{imagenes/}}
