@@ -1,5 +1,6 @@
 % ─── PORTADA (PDF externo) ────────────────────────────────────────────────────
 \includepdf[pages=1]{imagenes/CalidadIngenieriaPortada}
+\pagestyle{fancy}
 
 \tableofcontents
 \newpage
@@ -36,7 +37,7 @@
 \paso{1} Con $n = 125$ (impar), calcular la posici\'on central:
 \formula{\text{posici\'on} = \frac{n+1}{2} = \frac{126}{2} = 63}
 
-\paso{2} Ordenar los 125 datos de menor a mayor. El valor en la posici\'on 63 es:
+\paso{2} Ordenar los 125 datos de menor a mayor. Al hacerlo, el valor en la posici\'on 63 es 1.18\,mm.
 
 \resultado[$\tilde{x}$ -- Mediana]{\[ \tilde{x} = 1.18\;\text{mm} \]}
 
@@ -192,9 +193,9 @@ El proceso tiene \textbf{poca variabilidad}.}
   title style={font=\small\bfseries\color{azulprin}},
   grid=major, grid style={dashed,gray!40},
   bar width=0.0175,
-  xmin=1.10, xmax=1.26,
+  xmin=1.08, xmax=1.32,
   ymin=0, ymax=38,
-  enlarge x limits=0.02,
+  enlarge x limits=0,
 ]
 \addplot+[ybar interval, fill=azulmedio!80, draw=azulprin]
   coordinates {
@@ -205,8 +206,8 @@ El proceso tiene \textbf{poca variabilidad}.}
   coordinates {(1.10,0)(1.10,38)};
 \addplot+[mark=none, ambar, very thick, dashed]
   coordinates {(1.30,0)(1.30,38)};
-\node[font=\tiny, color=ambar] at (axis cs:1.105,36) {$E_I$};
-\node[font=\tiny, color=ambar] at (axis cs:1.295,36) {$E_S$};
+\node[font=\tiny, color=ambar] at (axis cs:1.092,36) {$E_I$};
+\node[font=\tiny, color=ambar] at (axis cs:1.308,36) {$E_S$};
 \end{axis}
 \end{tikzpicture}
 \caption{Histograma del grosor del envase. Las l\'ineas discontinuas indican $E_I$ y $E_S$.}
@@ -334,7 +335,7 @@ tendencia central del proceso es \textbf{adecuada}.}
 \end{center}
 
 % ─── 2.C Dispersión ───────────────────────────────────────────────────────────
-\subsection{C) Desviaci\'on est\'andar y coeficiente de variaci\'on}
+\subsection{C) Medidas de dispersi\'on}
 
 \subsubsection*{Rango ($R$)}
 
@@ -401,9 +402,9 @@ de la franja de tolerancia total (6\,mm). La variabilidad del proceso es
   title style={font=\small\bfseries\color{azulprin}},
   grid=major, grid style={dashed,gray!40},
   bar width=0.5375,
-  xmin=197.5, xmax=202.4,
+  xmin=196.0, xmax=204.0,
   ymin=0, ymax=27,
-  enlarge x limits=0.02,
+  enlarge x limits=0,
 ]
 \addplot+[ybar interval, fill=azulmedio!80, draw=azulprin]
   coordinates {
@@ -414,11 +415,11 @@ de la franja de tolerancia total (6\,mm). La variabilidad del proceso es
   coordinates {(197,0)(197,27)};
 \addplot+[mark=none, ambar, very thick, dashed]
   coordinates {(203,0)(203,27)};
-\node[font=\tiny, color=ambar] at (axis cs:197.2,25.5) {$E_I$};
-\node[font=\tiny, color=ambar] at (axis cs:202.8,25.5) {$E_S$};
+\node[font=\tiny, color=ambar] at (axis cs:196.5,25) {$E_I$};
+\node[font=\tiny, color=ambar] at (axis cs:203.4,25) {$E_S$};
 \addplot+[mark=none, verdeprin, thick]
   coordinates {(200,0)(200,27)};
-\node[font=\tiny, color=verdeprin] at (axis cs:199.7,25.5) {Nom.};
+\node[font=\tiny, color=verdeprin] at (axis cs:199.5,25) {Nom.};
 \end{axis}
 \end{tikzpicture}
 \caption{Histograma de longitud de tiras de hule. L\'ineas doradas: l\'imites de especificaci\'on. L\'inea verde: nominal.}
